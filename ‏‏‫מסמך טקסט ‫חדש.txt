@@ -1,0 +1,25 @@
+package com.company;
+
+
+
+public class Rental {
+    Book book;
+    String id;
+    Date rentStart;
+    Date rentEnd;
+
+    public Rental(Book book,String id,Date rentEnd){
+        this.book = book;
+        this.id = id;
+        this.rentEnd = rentEnd;
+    }
+    public void endRent(Date d){
+       this.rentEnd = new Date(d.day,d.month,d.year);
+    }
+    public int dayOfRent(){
+
+    }
+    public int costOf(){
+       return book.getPrice()*dayOfRent();
+    }
+}
